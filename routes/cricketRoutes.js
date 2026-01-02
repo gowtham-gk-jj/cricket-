@@ -17,14 +17,12 @@ let matches = [
   }
 ];
 
-// 🔹 GET – get all matches
 router.get('/', (req, res) => {
   res.json(matches);
-});
+})
 
-// 🔹 POST – add new match
 router.post('/', (req, res) => {
-  console.log("POST BODY:", req.body); // 🔍 debug
+  console.log("POST BODY:", req.body);
 
   const newMatch = req.body;
 
@@ -40,7 +38,6 @@ router.post('/', (req, res) => {
   });
 });
 
-// 🔹 DELETE – delete match by id
 router.delete('/:id', (req, res) => {
   const id = parseInt(req.params.id);
 
